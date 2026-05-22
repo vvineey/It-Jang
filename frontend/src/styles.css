@@ -1,6 +1,21 @@
 :root {
-  color: #243127;
-  background: #f7f2e7;
+  --forest: #214d37;
+  --forest-strong: #153725;
+  --moss: #5f7f53;
+  --mint: #dcebd2;
+  --paper: #f7f2e7;
+  --cotton: #fffaf0;
+  --wood: #8a5a3c;
+  --walnut: #4b2f22;
+  --clay: #b96f48;
+  --ink: #243127;
+  --muted: #758071;
+  --line: rgba(36, 49, 39, 0.13);
+  --shadow: 0 22px 56px rgba(33, 77, 55, 0.16);
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 20% 0%, rgba(95, 127, 83, 0.18), transparent 28%),
+    linear-gradient(135deg, #f7f2e7 0%, #ece2cf 48%, #d8e2cc 100%);
   font-family:
     Inter, Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-synthesis: none;
@@ -31,24 +46,180 @@ a {
   text-decoration: none;
 }
 
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  padding: 18px;
+}
+
+.mobile-frame {
+  position: relative;
+  width: min(100%, 430px);
+  min-height: calc(100vh - 36px);
+  overflow: hidden;
+  border: 1px solid rgba(33, 77, 55, 0.16);
+  border-radius: 34px;
+  background: linear-gradient(180deg, rgba(255, 250, 240, 0.96), rgba(247, 242, 231, 0.98));
+  box-shadow: var(--shadow);
+}
+
+.screen {
+  min-height: 100vh;
+  padding: 28px 20px 106px;
+}
+
 .placeholder-page {
   display: grid;
-  min-height: 100vh;
-  place-items: center;
-  padding: 32px;
-  text-align: center;
+  align-content: center;
 }
 
 .eyebrow {
   margin: 0 0 8px;
-  color: #3d6d4d;
+  color: var(--moss);
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 0;
   text-transform: uppercase;
 }
 
-.placeholder-page h1 {
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.page-header h1 {
   margin: 0;
-  font-size: clamp(32px, 7vw, 64px);
+  color: var(--forest-strong);
+  font-size: 30px;
+  line-height: 1.08;
+}
+
+.page-description {
+  max-width: 300px;
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.page-action {
+  flex: 0 0 auto;
+}
+
+.bottom-nav {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  left: 14px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+  min-height: 72px;
+  padding: 8px;
+  border: 1px solid rgba(33, 77, 55, 0.12);
+  border-radius: 24px;
+  background: rgba(255, 250, 240, 0.92);
+  box-shadow: 0 14px 34px rgba(75, 47, 34, 0.14);
+  backdrop-filter: blur(18px);
+}
+
+.bottom-nav__item {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: 18px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.bottom-nav__item.is-active {
+  background: var(--forest);
+  color: var(--cotton);
+}
+
+.tag-pill {
+  min-height: 38px;
+  border: 1px solid rgba(33, 77, 55, 0.18);
+  border-radius: 999px;
+  background: var(--cotton);
+  color: var(--forest);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 800;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease,
+    color 160ms ease;
+}
+
+.tag-pill:hover {
+  transform: translateY(-1px);
+}
+
+.tag-pill.is-active {
+  border-color: var(--forest);
+  background: var(--forest);
+  color: var(--cotton);
+}
+
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 250, 240, 0.82);
+  box-shadow: 0 12px 32px rgba(75, 47, 34, 0.08);
+}
+
+.primary-button,
+.secondary-button,
+.icon-button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.primary-button {
+  padding: 0 18px;
+  background: var(--forest);
+  color: var(--cotton);
+}
+
+.secondary-button {
+  padding: 0 16px;
+  border: 1px solid rgba(33, 77, 55, 0.18);
+  background: var(--cotton);
+  color: var(--forest);
+}
+
+.icon-button {
+  width: 44px;
+  color: var(--forest);
+  background: var(--mint);
+}
+
+@media (max-width: 520px) {
+  .app-shell {
+    padding: 0;
+  }
+
+  .mobile-frame {
+    width: 100%;
+    min-height: 100vh;
+    border: 0;
+    border-radius: 0;
+  }
 }
