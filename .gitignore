@@ -5,6 +5,7 @@ node_modules/
 dist/
 build/
 target/
+*.tsbuildinfo
 
 # environment
 .env
@@ -20,4 +21,3 @@ target/
 
 # OS
 .DS_Store
-
