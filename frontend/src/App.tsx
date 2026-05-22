@@ -1,11 +1,12 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import AppShell from "./components/layout/AppShell";
+import HomePage from "./pages/HomePage";
 import PlaceholderPage from "./pages/PlaceholderPage";
 
 const App = () => (
   <Routes>
     <Route element={<AppShell />}>
-      <Route path="/" element={<PlaceholderPage title="홈 화면 준비 중" />} />
+      <Route path="/" element={<HomePage />} />
       <Route path="/profile" element={<PlaceholderPage title="사용자 정보 입력" />} />
       <Route path="/closet" element={<PlaceholderPage title="내 옷장 조회" />} />
       <Route path="/closet/register" element={<PlaceholderPage title="옷장 등록" />} />
