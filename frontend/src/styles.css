@@ -627,6 +627,98 @@ a {
   font-weight: 800;
 }
 
+.register-screen {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+}
+
+.segmented-control {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 5px;
+  border: 1px solid rgba(33, 77, 55, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 250, 240, 0.82);
+}
+
+.segmented-control button {
+  min-height: 40px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.segmented-control button.is-active {
+  background: var(--forest);
+  color: var(--cotton);
+}
+
+.register-panel {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+}
+
+.upload-box {
+  display: grid;
+  min-height: 156px;
+  place-items: center;
+  gap: 8px;
+  border: 1px dashed rgba(33, 77, 55, 0.36);
+  border-radius: 8px;
+  background: rgba(220, 235, 210, 0.56);
+  color: var(--forest);
+  cursor: pointer;
+  font-weight: 950;
+}
+
+.upload-box--small {
+  min-height: 92px;
+}
+
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.platform-card {
+  display: grid;
+  min-height: 84px;
+  place-items: center;
+  gap: 7px;
+  border: 1px solid rgba(33, 77, 55, 0.14);
+  border-radius: 8px;
+  background: var(--cotton);
+  color: var(--forest);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.url-field div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid rgba(33, 77, 55, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 250, 240, 0.92);
+}
+
+.url-field input {
+  min-height: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
 @media (max-width: 520px) {
   .app-shell {
     padding: 0;
