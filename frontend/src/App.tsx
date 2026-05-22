@@ -2,8 +2,8 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import AppShell from "./components/layout/AppShell";
 import ClosetPage from "./pages/ClosetPage";
 import ClosetRegisterPage from "./pages/ClosetRegisterPage";
+import CommunityPage from "./pages/CommunityPage";
 import HomePage from "./pages/HomePage";
-import PlaceholderPage from "./pages/PlaceholderPage";
 import RecommendationResultPage from "./pages/RecommendationResultPage";
 import RecommendationSelectPage from "./pages/RecommendationSelectPage";
 import UserProfilePage from "./pages/UserProfilePage";
@@ -17,7 +17,7 @@ const App = () => (
       <Route path="/closet/register" element={<ClosetRegisterPage />} />
       <Route path="/recommend" element={<RecommendationSelectPage />} />
       <Route path="/recommend/result" element={<RecommendationResultPage />} />
-      <Route path="/community" element={<PlaceholderPage title="커뮤니티" />} />
+      <Route path="/community" element={<CommunityPage />} />
     </Route>
     <Route path="*" element={<Navigate to="/" replace />} />
   </Routes>
