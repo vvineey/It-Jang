@@ -4,6 +4,7 @@ import ClosetPage from "./pages/ClosetPage";
 import ClosetRegisterPage from "./pages/ClosetRegisterPage";
 import HomePage from "./pages/HomePage";
 import PlaceholderPage from "./pages/PlaceholderPage";
+import RecommendationSelectPage from "./pages/RecommendationSelectPage";
 import UserProfilePage from "./pages/UserProfilePage";
 
 const App = () => (
@@ -13,7 +14,7 @@ const App = () => (
       <Route path="/profile" element={<UserProfilePage />} />
       <Route path="/closet" element={<ClosetPage />} />
       <Route path="/closet/register" element={<ClosetRegisterPage />} />
-      <Route path="/recommend" element={<PlaceholderPage title="옷 추천 선택" />} />
+      <Route path="/recommend" element={<RecommendationSelectPage />} />
       <Route path="/recommend/result" element={<PlaceholderPage title="추천 결과" />} />
       <Route path="/community" element={<PlaceholderPage title="커뮤니티" />} />
     </Route>

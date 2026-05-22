@@ -719,6 +719,83 @@ a {
   background: transparent;
 }
 
+.recommend-screen {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+}
+
+.prompt-panel {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+}
+
+.prompt-box {
+  display: grid;
+  gap: 8px;
+}
+
+.prompt-box span {
+  color: var(--forest-strong);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.prompt-box textarea {
+  width: 100%;
+  min-height: 118px;
+  resize: vertical;
+  border: 1px solid rgba(33, 77, 55, 0.16);
+  border-radius: 8px;
+  outline: 0;
+  padding: 13px;
+  background: rgba(255, 250, 240, 0.94);
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.prompt-box textarea:focus {
+  border-color: var(--forest);
+  box-shadow: 0 0 0 3px rgba(33, 77, 55, 0.12);
+}
+
+.prompt-submit {
+  width: 100%;
+}
+
+.tag-select-panel {
+  display: grid;
+  gap: 12px;
+}
+
+.recommend-tag-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.selected-summary {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px;
+  color: var(--forest);
+}
+
+.selected-summary strong {
+  display: block;
+  font-size: 15px;
+}
+
+.selected-summary p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
 @media (max-width: 520px) {
   .app-shell {
     padding: 0;
