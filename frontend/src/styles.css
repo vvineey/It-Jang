@@ -1266,6 +1266,32 @@ a {
   color: var(--cotton);
 }
 
+.circulation-entry-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 15px 16px;
+  border-radius: 18px;
+  background: var(--paper);
+  color: var(--forest);
+}
+
+.circulation-entry-card strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.circulation-entry-card span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
 .outfit-post-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

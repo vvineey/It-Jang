@@ -1,4 +1,5 @@
-import { Bookmark, Heart, PlusCircle } from "lucide-react";
+import { Bookmark, ChevronRight, Heart, PlusCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 import PageHeader from "../components/common/PageHeader";
 import { outfitPosts } from "../data/mockData";
 
@@ -29,6 +30,14 @@ const CommunityPage = () => (
         </button>
       ))}
     </div>
+
+    <Link className="circulation-entry-card" to="/circulation">
+      <div>
+        <strong>입지 않는 옷이 있다면</strong>
+        <span>순환 옷장에서 필요한 사람에게 이어주세요.</span>
+      </div>
+      <ChevronRight aria-hidden size={18} />
+    </Link>
 
     <section className="outfit-post-grid" aria-label="코디 게시글">
       {outfitPosts.map((post) => (
