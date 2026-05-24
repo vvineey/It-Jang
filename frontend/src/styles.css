@@ -1022,13 +1022,14 @@ a {
 .recommend-screen {
   display: grid;
   align-content: start;
-  gap: 16px;
+  gap: 18px;
 }
 
 .prompt-panel {
   display: grid;
-  gap: 12px;
-  padding: 16px;
+  gap: 14px;
+  padding: 20px;
+  border-radius: 22px;
 }
 
 .prompt-box {
@@ -1038,19 +1039,19 @@ a {
 
 .prompt-box span {
   color: var(--forest-strong);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 900;
 }
 
 .prompt-box textarea {
   width: 100%;
-  min-height: 118px;
+  min-height: 128px;
   resize: vertical;
-  border: 1px solid rgba(33, 77, 55, 0.16);
-  border-radius: 8px;
+  border: 1px solid rgba(33, 77, 55, 0.1);
+  border-radius: 18px;
   outline: 0;
-  padding: 13px;
-  background: rgba(255, 250, 240, 0.94);
+  padding: 16px;
+  background: #ffffff;
   color: var(--ink);
   line-height: 1.5;
 }
@@ -1062,11 +1063,27 @@ a {
 
 .prompt-submit {
   width: 100%;
+  min-height: 54px;
+  border-radius: 16px;
+  font-size: 16px;
 }
 
 .tag-select-panel {
   display: grid;
-  gap: 12px;
+  gap: 14px;
+  padding: 2px 0;
+}
+
+.recommend-tag-group {
+  display: grid;
+  gap: 9px;
+}
+
+.recommend-tag-group h3 {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 850;
 }
 
 .recommend-tag-grid {
@@ -1079,7 +1096,8 @@ a {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  padding: 14px;
+  padding: 16px;
+  border-radius: 20px;
   color: var(--forest);
 }
 
