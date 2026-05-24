@@ -599,41 +599,87 @@ a {
 .profile-screen {
   display: grid;
   align-content: start;
-  gap: 14px;
+  gap: 16px;
 }
 
 .privacy-callout {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
-  padding: 12px 14px;
-  border: 1px solid rgba(33, 77, 55, 0.16);
-  border-radius: 8px;
-  background: rgba(220, 235, 210, 0.68);
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(220, 235, 210, 0.72);
   color: var(--forest);
-  font-size: 13px;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 750;
   line-height: 1.45;
 }
 
 .profile-section {
-  padding: 16px;
+  padding: 20px;
+  border-radius: 22px;
 }
 
 .section-heading {
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .section-heading h2 {
   margin: 0;
   color: var(--forest-strong);
-  font-size: 21px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.section-heading p,
+.profile-section summary p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.profile-section--optional {
+  display: grid;
+  gap: 16px;
+}
+
+.profile-section--optional summary {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.profile-section--optional summary::-webkit-details-marker {
+  display: none;
+}
+
+.profile-section--optional summary h2 {
+  margin: 0;
+  color: var(--forest-strong);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.profile-section--optional summary span {
+  flex: 0 0 auto;
+  color: var(--moss);
+  font-size: 13px;
+  font-weight: 850;
 }
 
 .form-grid,
 .preference-block {
   display: grid;
   gap: 12px;
+}
+
+.profile-section--optional .preference-block:first-of-type {
+  margin-top: 16px;
 }
 
 .field-row {
@@ -644,33 +690,34 @@ a {
 
 .field {
   display: grid;
-  gap: 7px;
+  gap: 8px;
   color: var(--forest-strong);
-  font-size: 13px;
-  font-weight: 900;
+  font-size: 14px;
+  font-weight: 850;
 }
 
 .field input,
 .field select,
 .field textarea {
   width: 100%;
-  min-height: 44px;
-  border: 1px solid rgba(33, 77, 55, 0.16);
-  border-radius: 8px;
+  min-height: 52px;
+  border: 1px solid rgba(33, 77, 55, 0.1);
+  border-radius: 16px;
   outline: 0;
-  background: rgba(255, 250, 240, 0.92);
+  background: #ffffff;
   color: var(--ink);
   font-size: 15px;
+  font-weight: 650;
 }
 
 .field input,
 .field select {
-  padding: 0 12px;
+  padding: 0 15px;
 }
 
 .field textarea {
   resize: vertical;
-  padding: 12px;
+  padding: 15px;
   line-height: 1.5;
 }
 
@@ -695,7 +742,10 @@ a {
 
 .profile-submit {
   width: 100%;
-  margin-top: 4px;
+  min-height: 56px;
+  margin-top: 6px;
+  border-radius: 16px;
+  font-size: 16px;
 }
 
 .closet-screen {

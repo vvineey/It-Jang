@@ -4,11 +4,14 @@ import { styleOptions } from "../../data/mockData";
 const avoidOptions = ["네온", "과한 로고", "불편한 핏", "두꺼운 소재"];
 
 const OptionalInfoSection = () => (
-  <section className="profile-section panel" aria-labelledby="optional-info-title">
-    <div className="section-heading">
-      <p className="eyebrow">optional</p>
+  <details className="profile-section profile-section--optional panel" open>
+    <summary>
+      <div>
       <h2 id="optional-info-title">선택 정보</h2>
-    </div>
+        <p>취향을 고르면 추천이 더 자연스러워져요.</p>
+      </div>
+      <span>접기</span>
+    </summary>
 
     <div className="preference-block">
       <h3>선호 스타일</h3>
@@ -30,9 +33,9 @@ const OptionalInfoSection = () => (
 
     <label className="field">
       <span>체형 특이사항</span>
-      <textarea placeholder="예: 어깨가 좁아 보이지 않는 핏을 선호해요." rows={4} />
+      <textarea placeholder="어깨가 좁아 보이지 않는 핏을 선호해요." rows={4} />
     </label>
-  </section>
+  </details>
 );
 
 export default OptionalInfoSection;
