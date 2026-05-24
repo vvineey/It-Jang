@@ -754,18 +754,28 @@ a {
   gap: 16px;
 }
 
+.closet-add-button {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--forest);
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(33, 77, 55, 0.18);
+}
+
 .closet-summary {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+  gap: 9px;
 }
 
 .closet-summary div {
-  min-height: 78px;
-  padding: 12px 10px;
-  border: 1px solid rgba(33, 77, 55, 0.13);
-  border-radius: 8px;
-  background: rgba(220, 235, 210, 0.58);
+  min-height: 86px;
+  padding: 14px 12px;
+  border-radius: 18px;
+  background: var(--paper);
 }
 
 .closet-summary strong {
@@ -777,7 +787,7 @@ a {
 
 .closet-summary span {
   display: block;
-  margin-top: 8px;
+  margin-top: 9px;
   color: var(--muted);
   font-size: 12px;
   font-weight: 800;
@@ -788,14 +798,19 @@ a {
   display: flex;
   gap: 8px;
   overflow-x: auto;
-  padding-bottom: 2px;
+  padding-bottom: 1px;
+  scrollbar-width: none;
+}
+
+.category-tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .category-tab {
   flex: 0 0 auto;
-  min-height: 38px;
+  min-height: 40px;
   padding: 0 14px;
-  border: 1px solid rgba(33, 77, 55, 0.16);
+  border: 0;
   border-radius: 999px;
   background: var(--cotton);
   color: var(--forest);
@@ -812,19 +827,20 @@ a {
 .closet-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  gap: 13px;
 }
 
 .clothing-card {
+  position: relative;
   overflow: hidden;
-  border: 1px solid rgba(33, 77, 55, 0.14);
-  border-radius: 8px;
-  background: rgba(255, 250, 240, 0.9);
-  box-shadow: 0 12px 26px rgba(75, 47, 34, 0.09);
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 10px 26px rgba(33, 77, 55, 0.08);
 }
 
 .clothing-card__image {
-  aspect-ratio: 1 / 1.1;
+  position: relative;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   background: var(--mint);
 }
@@ -836,42 +852,62 @@ a {
 }
 
 .clothing-card__body {
-  padding: 10px;
+  padding: 12px;
 }
 
 .source-badge {
   display: inline-flex;
-  min-height: 24px;
+  min-height: 23px;
   align-items: center;
   padding: 0 8px;
   border-radius: 999px;
   background: var(--mint);
   color: var(--forest);
   font-size: 11px;
-  font-weight: 900;
+  font-weight: 850;
+}
+
+.unworn-badge {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: rgba(33, 77, 55, 0.88);
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 850;
 }
 
 .clothing-card h3 {
   margin: 8px 0 4px;
   color: var(--forest-strong);
   font-size: 15px;
+  font-weight: 900;
   line-height: 1.25;
 }
 
 .clothing-card p {
   margin: 0;
   color: var(--muted);
-  font-size: 12px;
-  font-weight: 800;
+  font-size: 13px;
+  font-weight: 750;
 }
 
 .clothing-card__meta {
-  display: grid;
-  gap: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
   margin-top: 10px;
   color: var(--muted);
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 750;
+}
+
+.clothing-card__meta span {
+  padding: 4px 7px;
+  border-radius: 999px;
+  background: var(--paper);
 }
 
 .empty-panel {
@@ -881,6 +917,7 @@ a {
   place-items: center;
   gap: 12px;
   padding: 18px;
+  border-radius: 22px;
   text-align: center;
 }
 

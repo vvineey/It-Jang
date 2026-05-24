@@ -17,11 +17,10 @@ const ClosetPage = () => {
   return (
     <main className="screen closet-screen">
       <PageHeader
-        eyebrow="closet"
         title="내 옷장"
-        description="가지고 있는 옷을 카테고리별로 보고 추천 후보로 관리해요."
+        description="가지고 있는 옷을 모아보고 코디에 활용해요."
         action={
-          <Link className="icon-button" title="옷 등록" to="/closet/register">
+          <Link className="closet-add-button" title="옷 등록" to="/closet/register">
             <Plus aria-hidden size={20} />
           </Link>
         }
@@ -30,15 +29,15 @@ const ClosetPage = () => {
       <div className="closet-summary">
         <div>
           <strong>{clothingItems.length}</strong>
-          <span>등록된 옷</span>
+          <span>등록한 옷</span>
         </div>
         <div>
           <strong>2</strong>
-          <span>오래 안 입은 옷</span>
+          <span>안 입은 옷</span>
         </div>
         <div>
           <strong>86%</strong>
-          <span>내 옷 활용률</span>
+          <span>옷장 활용률</span>
         </div>
       </div>
 
@@ -62,7 +61,7 @@ const ClosetPage = () => {
           filteredItems.map((item) => <ClothingCard item={item} key={item.id} />)
         ) : (
           <div className="empty-panel panel">
-            <p>아직 이 카테고리에 등록된 옷이 없어요.</p>
+            <p>아직 등록된 옷이 없어요. 첫 옷을 등록해볼까요?</p>
             <Link className="secondary-button" to="/closet/register">
               옷 등록하기
             </Link>
