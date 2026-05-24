@@ -1,4 +1,6 @@
 :root {
+  --device-width: 393px;
+  --device-height: 852px;
   --forest: #214d37;
   --forest-strong: #153725;
   --moss: #5f7f53;
@@ -28,8 +30,15 @@
 
 body {
   min-width: 320px;
-  min-height: 100vh;
   margin: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 button,
@@ -46,15 +55,19 @@ a {
 
 .app-shell {
   display: flex;
-  min-height: 100vh;
+  height: 100dvh;
+  min-height: 0;
+  align-items: center;
   justify-content: center;
   padding: 18px;
+  overflow: hidden;
 }
 
 .mobile-frame {
   position: relative;
-  width: min(100%, 430px);
-  min-height: calc(100vh - 36px);
+  width: min(var(--device-width), calc(100vw - 24px));
+  height: min(var(--device-height), calc(100dvh - 24px));
+  min-height: 0;
   overflow: hidden;
   border: 1px solid rgba(33, 77, 55, 0.16);
   border-radius: 34px;
@@ -63,8 +76,17 @@ a {
 }
 
 .screen {
-  min-height: 100vh;
+  height: 100%;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   padding: 28px 20px 106px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.screen::-webkit-scrollbar {
+  display: none;
 }
 
 .placeholder-page {
@@ -1509,8 +1531,8 @@ a {
   }
 
   .mobile-frame {
-    width: 100%;
-    min-height: 100vh;
+    width: min(var(--device-width), 100vw);
+    height: min(var(--device-height), 100dvh);
     border: 0;
     border-radius: 0;
   }
