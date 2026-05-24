@@ -1,11 +1,15 @@
 import { Outlet } from "react-router-dom";
 import BottomNav from "./BottomNav";
 
-const AppShell = () => (
+type AppShellProps = {
+  showNav?: boolean;
+};
+
+const AppShell = ({ showNav = true }: AppShellProps) => (
   <div className="app-shell">
     <div className="mobile-frame">
       <Outlet />
-      <BottomNav />
+      {showNav ? <BottomNav /> : null}
     </div>
   </div>
 );

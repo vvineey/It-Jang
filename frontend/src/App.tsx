@@ -4,12 +4,16 @@ import ClosetPage from "./pages/ClosetPage";
 import ClosetRegisterPage from "./pages/ClosetRegisterPage";
 import CommunityPage from "./pages/CommunityPage";
 import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
 import RecommendationResultPage from "./pages/RecommendationResultPage";
 import RecommendationSelectPage from "./pages/RecommendationSelectPage";
 import UserProfilePage from "./pages/UserProfilePage";
 
 const App = () => (
   <Routes>
+    <Route element={<AppShell showNav={false} />}>
+      <Route path="/login" element={<LoginPage />} />
+    </Route>
     <Route element={<AppShell />}>
       <Route path="/" element={<HomePage />} />
       <Route path="/profile" element={<UserProfilePage />} />

@@ -209,51 +209,229 @@ a {
   background: var(--mint);
 }
 
-.home-screen {
+.login-screen {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 18px;
+  min-height: 100vh;
+  padding: 56px 24px 34px;
+  background: #ffffff;
 }
 
-.home-logo-hero {
+.login-brand {
   display: grid;
-  min-height: 520px;
-  place-items: center;
-  padding: 24px;
+  justify-items: center;
+  gap: 18px;
+  padding-top: 44px;
+  text-align: center;
 }
 
-.home-logo {
-  display: block;
-  width: min(82vw, 300px);
-  max-width: 100%;
+.login-logo {
+  width: min(66vw, 238px);
   height: auto;
 }
 
-.login-panel {
+.login-brand h1 {
+  margin: 0;
+  color: var(--forest-strong);
+  font-size: 27px;
+  font-weight: 900;
+  line-height: 1.18;
+}
+
+.login-brand p {
+  margin: 9px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.login-actions {
   display: grid;
-  gap: 10px;
-  padding: 14px;
+  gap: 11px;
+}
+
+.login-actions p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.45;
+  text-align: center;
 }
 
 .login-button {
   display: flex;
-  min-height: 52px;
+  min-height: 56px;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  border-radius: 8px;
-  font-weight: 950;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 850;
 }
 
-.login-button--musinsa {
-  background: #111511;
-  color: #fffaf0;
-}
-
-.login-button--kakao {
+.login-button--sns {
   background: #fee500;
   color: #2a2115;
+}
+
+.login-button--email {
+  background: var(--forest);
+  color: #ffffff;
+}
+
+.app-home-screen {
+  display: grid;
+  align-content: start;
+  gap: 18px;
+}
+
+.home-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.home-top p {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.home-top h1 {
+  margin: 0;
+  color: var(--forest-strong);
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.18;
+}
+
+.home-top img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.home-main-card {
+  display: grid;
+  gap: 20px;
+  padding: 22px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #214d37 0%, #5f7f53 100%);
+  color: #ffffff;
+  box-shadow: 0 18px 36px rgba(33, 77, 55, 0.18);
+}
+
+.home-main-card span {
+  display: inline-flex;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.home-main-card h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.home-main-card p {
+  margin: 9px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.home-cta {
+  min-height: 52px;
+  background: #ffffff;
+  color: var(--forest);
+}
+
+.home-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+}
+
+.home-stats div {
+  display: grid;
+  gap: 6px;
+  min-height: 104px;
+  align-content: center;
+  padding: 14px;
+  border-radius: 18px;
+  background: var(--paper);
+}
+
+.home-stats svg {
+  color: var(--moss);
+}
+
+.home-stats strong {
+  color: var(--forest-strong);
+  font-size: 22px;
+  line-height: 1;
+}
+
+.home-stats span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.home-section {
+  display: grid;
+  gap: 12px;
+}
+
+.home-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home-section__header h2 {
+  margin: 0;
+  color: var(--forest-strong);
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.home-section__header a {
+  color: var(--moss);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.home-item-row {
+  display: grid;
+  gap: 10px;
+}
+
+.home-quick-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.home-quick-actions a {
+  display: flex;
+  min-height: 54px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 16px;
+  background: var(--mint);
+  color: var(--forest);
+  font-weight: 900;
 }
 
 .profile-screen {
