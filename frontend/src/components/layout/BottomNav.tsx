@@ -1,12 +1,12 @@
-import { Home, Shirt, Sparkles, UsersRound, UserRound } from "lucide-react";
+import { Home, Shirt, Sparkles, UserRound, UsersRound } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 const navItems = [
   { to: "/", label: "홈", icon: Home },
-  { to: "/profile", label: "정보", icon: UserRound },
   { to: "/closet", label: "옷장", icon: Shirt },
   { to: "/recommend", label: "추천", icon: Sparkles },
   { to: "/community", label: "커뮤니티", icon: UsersRound },
+  { to: "/profile", label: "마이", icon: UserRound },
 ];
 
 const BottomNav = () => (
@@ -18,7 +18,7 @@ const BottomNav = () => (
         key={to}
         to={to}
       >
-        <Icon aria-hidden size={20} strokeWidth={2.2} />
+        <Icon aria-hidden size={19} strokeWidth={2.15} />
         <span>{label}</span>
       </NavLink>
     ))}

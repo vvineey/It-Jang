@@ -115,13 +115,13 @@ a {
   left: 14px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 4px;
-  min-height: 72px;
-  padding: 8px;
-  border: 1px solid rgba(33, 77, 55, 0.12);
-  border-radius: 24px;
-  background: rgba(255, 250, 240, 0.92);
-  box-shadow: 0 14px 34px rgba(75, 47, 34, 0.14);
+  gap: 5px;
+  min-height: 68px;
+  padding: 7px;
+  border: 1px solid rgba(33, 77, 55, 0.08);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 16px 34px rgba(33, 77, 55, 0.12);
   backdrop-filter: blur(18px);
 }
 
@@ -131,11 +131,12 @@ a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 4px;
-  border-radius: 18px;
-  color: var(--muted);
-  font-size: 11px;
+  gap: 3px;
+  border-radius: 19px;
+  color: #7e8a7c;
+  font-size: 10px;
   font-weight: 800;
+  line-height: 1;
 }
 
 .bottom-nav__item.is-active {
