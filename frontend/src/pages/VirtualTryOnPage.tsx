@@ -1,6 +1,6 @@
 import { ArrowLeft, BadgeCheck } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CreditNoticeCard from "../components/tryOn/CreditNoticeCard";
 import MannequinPreview, { type TryOnStatus } from "../components/tryOn/MannequinPreview";
 import PromptSummaryCard from "../components/tryOn/PromptSummaryCard";
@@ -125,6 +125,12 @@ const VirtualTryOnPage = () => {
       </section>
 
       <CreditNoticeCard creditInfo={creditInfo} status={status} />
+
+      <Link className="tryon-price-compare-card" to="/price-compare">
+        <span>구매 전 확인</span>
+        <strong>선택한 셔츠 가격 비교하기</strong>
+        <p>배송비까지 포함한 최종 예상가와 중고/교환 대안을 함께 볼 수 있어요.</p>
+      </Link>
 
       <TryOnActionButtons
         onGenerate={handleGenerate}

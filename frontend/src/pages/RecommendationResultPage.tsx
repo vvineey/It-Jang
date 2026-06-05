@@ -1,4 +1,5 @@
-import { CheckCircle2, Heart, RotateCcw, Sparkles } from "lucide-react";
+import { CheckCircle2, Heart, RotateCcw, SearchCheck, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 import ClothingCard from "../components/closet/ClothingCard";
 import PageHeader from "../components/common/PageHeader";
 import { recommendationGroups } from "../data/mockData";
@@ -60,6 +61,11 @@ const RecommendationResultPage = () => (
       이 코디 저장하기
       <Heart aria-hidden size={18} />
     </button>
+
+    <Link className="price-compare-entry-link" to="/price-compare">
+      <SearchCheck aria-hidden size={18} />
+      새로 살 아이템은 가격 비교하기
+    </Link>
   </main>
 );
 
