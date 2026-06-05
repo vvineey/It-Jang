@@ -1,8 +1,10 @@
 import { ArrowLeft, Search } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import LowestPriceCard from "../components/priceCompare/LowestPriceCard";
 import PriceFilterChips from "../components/priceCompare/PriceFilterChips";
+import PlatformOfferCard from "../components/priceCompare/PlatformOfferCard";
 import ProductSummaryCard from "../components/priceCompare/ProductSummaryCard";
-import { priceCompareProduct, priceFilterGroups } from "../data/priceCompareMock";
+import { priceCompareProduct, priceFilterGroups, priceOffers } from "../data/priceCompareMock";
 
 const recommendedKeywords = ["흰셔츠", "블랙로퍼", "와이드데님", "가디건", "린넨자켓"];
 
@@ -43,6 +45,22 @@ const PriceComparePage = () => {
         platforms={priceFilterGroups.platforms}
         sorts={priceFilterGroups.sorts}
       />
+
+      <LowestPriceCard offer={priceOffers.find((offer) => offer.isLowest) ?? priceOffers[0]} />
+
+      <section className="platform-offer-section" aria-label="플랫폼별 가격 비교">
+        <div className="price-section-heading">
+          <div>
+            <span>플랫폼별 가격</span>
+            <h2>최종 예상가로 비교해요</h2>
+          </div>
+        </div>
+        <div className="platform-offer-list">
+          {priceOffers.map((offer) => (
+            <PlatformOfferCard key={offer.id} offer={offer} />
+          ))}
+        </div>
+      </section>
     </main>
   );
 };

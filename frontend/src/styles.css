@@ -1845,7 +1845,9 @@ a {
 
 .price-search-card,
 .price-product-card,
-.price-filter-section {
+.price-filter-section,
+.lowest-price-card,
+.platform-offer-section {
   border: 1px solid rgba(33, 77, 55, 0.09);
   border-radius: 24px;
   background: var(--paper);
@@ -2004,6 +2006,249 @@ a {
   display: grid;
   gap: 10px;
   padding: 14px;
+}
+
+.price-section-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.price-section-heading span {
+  display: block;
+  color: var(--moss);
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.price-section-heading h2 {
+  margin: 5px 0 0;
+  color: var(--forest-strong);
+  font-size: 20px;
+  font-weight: 950;
+  line-height: 1.25;
+}
+
+.price-section-heading strong {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: var(--mint);
+  color: var(--forest);
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.lowest-price-card {
+  display: grid;
+  gap: 15px;
+  padding: 17px;
+  background: linear-gradient(145deg, #f7f2e7 0%, #eaf3e3 100%);
+}
+
+.lowest-price-main {
+  display: grid;
+  gap: 4px;
+  padding: 16px;
+  border-radius: 22px;
+  background: var(--forest);
+  color: var(--cotton);
+}
+
+.lowest-price-main span {
+  font-size: 12px;
+  font-weight: 850;
+  opacity: 0.78;
+}
+
+.lowest-price-main strong {
+  font-size: 30px;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.price-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0;
+}
+
+.price-detail-grid div {
+  padding: 11px 8px;
+  border-radius: 17px;
+  background: rgba(255, 250, 240, 0.86);
+  text-align: center;
+}
+
+.price-detail-grid dt {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.price-detail-grid dd {
+  margin: 5px 0 0;
+  color: var(--forest-strong);
+  font-size: 13px;
+  font-weight: 950;
+}
+
+.lowest-price-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1.45;
+}
+
+.lowest-price-card .primary-button {
+  width: 100%;
+  min-height: 50px;
+}
+
+.platform-offer-section {
+  display: grid;
+  gap: 13px;
+  padding: 17px;
+}
+
+.platform-offer-list {
+  display: grid;
+  gap: 12px;
+}
+
+.platform-offer-card {
+  display: grid;
+  grid-template-columns: 94px 1fr;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid rgba(33, 77, 55, 0.09);
+  border-radius: 21px;
+  background: rgba(255, 250, 240, 0.82);
+}
+
+.platform-offer-card.is-lowest {
+  border-color: rgba(33, 77, 55, 0.32);
+  background: #ffffff;
+}
+
+.platform-offer-card > img {
+  width: 100%;
+  height: 118px;
+  border-radius: 17px;
+  object-fit: cover;
+}
+
+.platform-offer-card__body {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.platform-offer-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.platform-offer-card__top > span {
+  color: var(--forest);
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.platform-offer-card__top div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.platform-offer-card__top strong {
+  padding: 5px 7px;
+  border-radius: 999px;
+  background: var(--mint);
+  color: var(--forest);
+  font-size: 10px;
+  font-weight: 950;
+}
+
+.platform-offer-card h3 {
+  margin: 0;
+  color: var(--forest-strong);
+  font-size: 15px;
+  font-weight: 950;
+  line-height: 1.28;
+}
+
+.platform-offer-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.platform-offer-card dl {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+}
+
+.platform-offer-card dl div,
+.offer-sub-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.platform-offer-card dt,
+.offer-sub-info span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.platform-offer-card dd {
+  margin: 0;
+  color: var(--forest-strong);
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.platform-offer-card dl div:last-child dd {
+  color: var(--forest);
+  font-size: 15px;
+}
+
+.offer-sub-info {
+  flex-wrap: wrap;
+}
+
+.offer-sub-info span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.platform-offer-card a {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid rgba(33, 77, 55, 0.18);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--forest);
+  font-size: 12px;
+  font-weight: 950;
 }
 
 @keyframes tryon-spin {
