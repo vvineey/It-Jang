@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import RecommendationResultPage from "./pages/RecommendationResultPage";
 import RecommendationSelectPage from "./pages/RecommendationSelectPage";
+import PriceComparePage from "./pages/PriceComparePage";
 import UserProfilePage from "./pages/UserProfilePage";
 import VirtualTryOnPage from "./pages/VirtualTryOnPage";
 
@@ -23,6 +24,7 @@ const App = () => (
       <Route path="/closet/register" element={<ClosetRegisterPage />} />
       <Route path="/recommend" element={<RecommendationSelectPage />} />
       <Route path="/recommend/result" element={<RecommendationResultPage />} />
+      <Route path="/price-compare" element={<PriceComparePage />} />
       <Route path="/try-on" element={<VirtualTryOnPage />} />
       <Route path="/community" element={<CommunityPage />} />
       <Route path="/circulation" element={<CirculationPage />} />
