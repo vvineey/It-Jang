@@ -1,10 +1,20 @@
 import { ArrowLeft, Search } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import ClosetMatchSection from "../components/priceCompare/ClosetMatchSection";
 import LowestPriceCard from "../components/priceCompare/LowestPriceCard";
 import PriceFilterChips from "../components/priceCompare/PriceFilterChips";
+import PriceHistoryChart from "../components/priceCompare/PriceHistoryChart";
 import PlatformOfferCard from "../components/priceCompare/PlatformOfferCard";
 import ProductSummaryCard from "../components/priceCompare/ProductSummaryCard";
-import { priceCompareProduct, priceFilterGroups, priceOffers } from "../data/priceCompareMock";
+import SimilarProductSection from "../components/priceCompare/SimilarProductSection";
+import {
+  closetMatches,
+  priceCompareProduct,
+  priceFilterGroups,
+  priceHistory,
+  priceOffers,
+  similarProducts,
+} from "../data/priceCompareMock";
 
 const recommendedKeywords = ["흰셔츠", "블랙로퍼", "와이드데님", "가디건", "린넨자켓"];
 
@@ -61,6 +71,12 @@ const PriceComparePage = () => {
           ))}
         </div>
       </section>
+
+      <PriceHistoryChart history={priceHistory} />
+
+      <ClosetMatchSection items={closetMatches} score={priceCompareProduct.closetMatchScore} />
+
+      <SimilarProductSection products={similarProducts} />
     </main>
   );
 };
