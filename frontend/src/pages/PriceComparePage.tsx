@@ -1,7 +1,9 @@
 import { ArrowLeft, Search } from "lucide-react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ClosetMatchSection from "../components/priceCompare/ClosetMatchSection";
 import LowestPriceCard from "../components/priceCompare/LowestPriceCard";
+import PriceAlertModal from "../components/priceCompare/PriceAlertModal";
 import PriceFilterChips from "../components/priceCompare/PriceFilterChips";
 import PriceHistoryChart from "../components/priceCompare/PriceHistoryChart";
 import PlatformOfferCard from "../components/priceCompare/PlatformOfferCard";
@@ -20,6 +22,8 @@ const recommendedKeywords = ["흰셔츠", "블랙로퍼", "와이드데님", "�
 
 const PriceComparePage = () => {
   const navigate = useNavigate();
+  const [isAlertOpen, setIsAlertOpen] = useState(false);
+  const lowestOffer = priceOffers.find((offer) => offer.isLowest) ?? priceOffers[0];
 
   return (
     <main className="screen price-screen">
@@ -47,7 +51,7 @@ const PriceComparePage = () => {
         </div>
       </section>
 
-      <ProductSummaryCard product={priceCompareProduct} onTrackClick={() => undefined} />
+      <ProductSummaryCard product={priceCompareProduct} onTrackClick={() => setIsAlertOpen(true)} />
 
       <PriceFilterChips
         activePlatform="전체"
@@ -56,7 +60,7 @@ const PriceComparePage = () => {
         sorts={priceFilterGroups.sorts}
       />
 
-      <LowestPriceCard offer={priceOffers.find((offer) => offer.isLowest) ?? priceOffers[0]} />
+      <LowestPriceCard offer={lowestOffer} />
 
       <section className="platform-offer-section" aria-label="플랫폼별 가격 비교">
         <div className="price-section-heading">
@@ -77,6 +81,10 @@ const PriceComparePage = () => {
       <ClosetMatchSection items={closetMatches} score={priceCompareProduct.closetMatchScore} />
 
       <SimilarProductSection products={similarProducts} />
+
+      {isAlertOpen ? (
+        <PriceAlertModal currentPrice={lowestOffer.finalPrice} onClose={() => setIsAlertOpen(false)} />
+      ) : null}
     </main>
   );
 };
