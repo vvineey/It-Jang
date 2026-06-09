@@ -1557,13 +1557,8 @@ a {
 }
 
 .face-photo-control__actions {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 38px 38px;
+  display: flex;
   gap: 7px;
-}
-
-.face-photo-control__actions:has(.face-photo-icon-button:first-of-type:last-of-type) {
-  grid-template-columns: minmax(0, 1fr) 38px;
 }
 
 .face-photo-button,
@@ -1578,6 +1573,7 @@ a {
 }
 
 .face-photo-button {
+  flex: 1 1 auto;
   gap: 7px;
   padding: 0 12px;
   background: var(--forest);
@@ -1587,6 +1583,8 @@ a {
 }
 
 .face-photo-icon-button {
+  width: 38px;
+  flex: 0 0 38px;
   background: var(--paper);
   color: var(--forest);
 }
