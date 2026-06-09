@@ -1307,6 +1307,17 @@ a {
   background: #ffffff;
 }
 
+.tryon-loading-screen {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(220, 235, 210, 0.82), transparent 36%),
+    #ffffff;
+  color: var(--forest);
+  font-size: 14px;
+  font-weight: 900;
+}
+
 .tryon-header {
   display: grid;
   grid-template-columns: 44px 1fr;
