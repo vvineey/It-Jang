@@ -1,5 +1,5 @@
 import { Loader2, Move3D, Sparkles } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Avatar3DScene from "./Avatar3DScene";
 import FacePhotoUploader from "./FacePhotoUploader";
 
@@ -34,17 +34,6 @@ const MannequinPreview = ({ status }: MannequinPreviewProps) => {
   const [pantsColor, setPantsColor] = useState(pantsColors[0].color);
   const [shirtColor, setShirtColor] = useState(shirtColors[0].color);
 
-  useEffect(
-    () => () => {
-      if (facePhotoUrl) URL.revokeObjectURL(facePhotoUrl);
-    },
-    [facePhotoUrl],
-  );
-
-  const handlePhotoChange = (file: File | null) => {
-    setFacePhotoUrl(file ? URL.createObjectURL(file) : null);
-  };
-
   return (
     <section className={`mannequin-preview is-${status}`} aria-label="3D 착용 미리보기">
       <div className="mannequin-preview__topline">
@@ -65,7 +54,7 @@ const MannequinPreview = ({ status }: MannequinPreviewProps) => {
         autoRotate={autoRotate}
         facePhotoUrl={facePhotoUrl}
         onAutoRotateChange={setAutoRotate}
-        onPhotoChange={handlePhotoChange}
+        onPhotoChange={setFacePhotoUrl}
       />
 
       <div className="tryon-preview-frame">

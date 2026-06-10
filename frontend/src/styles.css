@@ -1558,6 +1558,26 @@ a {
   font-weight: 950;
 }
 
+.face-photo-control__copy {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.face-photo-control__copy img {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  border: 2px solid #ffffff;
+  border-radius: 999px;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(33, 77, 55, 0.13);
+}
+
+.face-photo-control__copy div {
+  min-width: 0;
+}
+
 .face-photo-control__copy p {
   margin: 5px 0 0;
   color: var(--muted);
@@ -1591,6 +1611,11 @@ a {
   color: #ffffff;
   font-size: 13px;
   font-weight: 900;
+}
+
+.face-photo-button:disabled {
+  cursor: wait;
+  opacity: 0.72;
 }
 
 .face-photo-icon-button {
