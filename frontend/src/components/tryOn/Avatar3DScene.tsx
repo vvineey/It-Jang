@@ -1,7 +1,7 @@
 import { ContactShadows, OrbitControls, RoundedBox, useTexture } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useEffect, useRef } from "react";
-import { Color, Group, SRGBColorSpace, Texture } from "three";
+import { Suspense, useEffect, useRef } from "react";
+import { Color, Group, LinearFilter, SRGBColorSpace, Texture } from "three";
 import type { TryOnStatus } from "./MannequinPreview";
 
 type Avatar3DSceneProps = {
@@ -19,12 +19,14 @@ const FacePhoto = ({ url }: { url: string }) => {
 
   useEffect(() => {
     texture.colorSpace = SRGBColorSpace;
+    texture.magFilter = LinearFilter;
+    texture.minFilter = LinearFilter;
     texture.needsUpdate = true;
   }, [texture]);
 
   return (
-    <mesh position={[0, 2.28, 0.505]}>
-      <circleGeometry args={[0.41, 64]} />
+    <mesh position={[0, 2.3, 0.518]} scale={[0.92, 1.08, 1]}>
+      <circleGeometry args={[0.47, 96]} />
       <meshBasicMaterial map={texture} toneMapped={false} />
     </mesh>
   );
@@ -65,7 +67,9 @@ const AvatarFigure = ({ facePhotoUrl, pantsColor, shirtColor, status }: AvatarFi
         <sphereGeometry args={[0.53, 48, 48]} />
         <meshStandardMaterial color={skinColor} roughness={0.75} />
       </mesh>
-      {facePhotoUrl ? <FacePhoto url={facePhotoUrl} /> : <DefaultFace />}
+      <Suspense fallback={<DefaultFace />}>
+        {facePhotoUrl ? <FacePhoto url={facePhotoUrl} /> : <DefaultFace />}
+      </Suspense>
 
       <mesh castShadow position={[0, 1.72, 0]}>
         <cylinderGeometry args={[0.2, 0.23, 0.36, 32]} />
