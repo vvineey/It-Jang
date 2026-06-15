@@ -14,6 +14,7 @@
   --muted: #707970;
   --line: rgba(47, 74, 55, 0.16);
   --shadow: 0 24px 58px rgba(33, 54, 40, 0.22);
+  --logo-optical-offset-x: 5.6%;
   color: var(--ink);
   background: #35483b;
   font-family:
@@ -103,6 +104,7 @@ a {
   width: 52px;
   height: 58px;
   object-fit: contain;
+  transform: translateX(var(--logo-optical-offset-x));
 }
 
 .screen {
@@ -282,6 +284,7 @@ a {
 .login-logo {
   width: min(58vw, 214px);
   height: auto;
+  transform: translateX(var(--logo-optical-offset-x));
 }
 
 .login-brand h1 {
