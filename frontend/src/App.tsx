@@ -7,6 +7,7 @@ import CommunityPage from "./pages/CommunityPage";
 import CirculationPage from "./pages/CirculationPage";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
+import OutfitCopyPage from "./pages/OutfitCopyPage";
 import RecommendationResultPage from "./pages/RecommendationResultPage";
 import RecommendationSelectPage from "./pages/RecommendationSelectPage";
 import PriceComparePage from "./pages/PriceComparePage";
@@ -42,6 +43,7 @@ const App = () => (
         }
       />
       <Route path="/community" element={<CommunityPage />} />
+      <Route path="/outfits/:postId/copy" element={<OutfitCopyPage />} />
       <Route path="/circulation" element={<CirculationPage />} />
     </Route>
     <Route path="*" element={<Navigate to="/" replace />} />
