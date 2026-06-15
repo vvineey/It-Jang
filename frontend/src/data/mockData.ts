@@ -449,6 +449,7 @@ export const outfitPosts: OutfitPost[] = [
     imageUrl:
       "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80",
     tags: ["비오는날", "가디건", "데일리"],
+    visibility: "PUBLIC",
     likes: 128,
     saves: 42,
   },
@@ -459,6 +460,7 @@ export const outfitPosts: OutfitPost[] = [
     imageUrl:
       "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80",
     tags: ["데이트", "빈티지", "로퍼"],
+    visibility: "FRIENDS",
     likes: 96,
     saves: 31,
   },
@@ -469,6 +471,7 @@ export const outfitPosts: OutfitPost[] = [
     imageUrl:
       "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80",
     tags: ["면접", "셔츠", "슬랙스"],
+    visibility: "PUBLIC",
     likes: 74,
     saves: 19,
   },
@@ -479,6 +482,7 @@ export const outfitPosts: OutfitPost[] = [
     imageUrl:
       "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=900&q=80",
     tags: ["피크닉", "스커트", "러블리"],
+    visibility: "PUBLIC",
     likes: 151,
     saves: 58,
   },
@@ -489,6 +493,7 @@ export const outfitPosts: OutfitPost[] = [
     imageUrl:
       "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=900&q=80",
     tags: ["등교", "데님", "스니커즈"],
+    visibility: "FRIENDS",
     likes: 63,
     saves: 17,
   },
@@ -499,6 +504,7 @@ export const outfitPosts: OutfitPost[] = [
     imageUrl:
       "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=900&q=80",
     tags: ["아우터", "재활용", "차분한"],
+    visibility: "PUBLIC",
     likes: 112,
     saves: 36,
   },
