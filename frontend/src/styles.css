@@ -852,9 +852,11 @@ a {
 
 .category-tabs {
   display: flex;
+  min-height: 42px;
+  align-items: center;
   gap: 8px;
   overflow-x: auto;
-  padding-bottom: 1px;
+  padding: 1px 0;
   scrollbar-width: none;
 }
 
@@ -863,10 +865,13 @@ a {
 }
 
 .category-tab {
+  display: inline-flex;
   flex: 0 0 auto;
   min-height: 40px;
+  align-items: center;
+  justify-content: center;
   padding: 0 14px;
-  border: 0;
+  border: 1px solid rgba(54, 95, 69, 0.18);
   border-radius: 999px;
   background: var(--cotton);
   color: var(--forest);
@@ -2113,6 +2118,8 @@ a {
 .price-keyword-row,
 .price-chip-row {
   display: flex;
+  min-height: 38px;
+  align-items: center;
   gap: 8px;
   overflow-x: auto;
   scrollbar-width: none;
@@ -2807,9 +2814,11 @@ a {
 
 .community-filter-tabs {
   display: flex;
+  min-height: 42px;
+  align-items: center;
   gap: 8px;
   overflow-x: auto;
-  padding-bottom: 1px;
+  padding: 1px 0;
   scrollbar-width: none;
 }
 
@@ -2818,10 +2827,13 @@ a {
 }
 
 .community-filter-tabs button {
+  display: inline-flex;
   flex: 0 0 auto;
   min-height: 40px;
+  align-items: center;
+  justify-content: center;
   padding: 0 14px;
-  border: 0;
+  border: 1px solid rgba(54, 95, 69, 0.18);
   border-radius: 999px;
   background: var(--cotton);
   color: var(--forest);
@@ -3769,6 +3781,8 @@ a {
 
 .service-chip-row {
   display: flex;
+  min-height: 38px;
+  align-items: center;
   gap: 7px;
   overflow-x: auto;
   scrollbar-width: none;
@@ -3779,10 +3793,13 @@ a {
 }
 
 .service-chip-row button {
+  display: inline-flex;
   flex: 0 0 auto;
   min-height: 36px;
+  align-items: center;
+  justify-content: center;
   padding: 0 12px;
-  border: 0;
+  border: 1px solid rgba(54, 95, 69, 0.18);
   border-radius: 999px;
   background: var(--cotton);
   color: var(--forest);
