@@ -1,4 +1,5 @@
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight, ShieldCheck, ThermometerSun } from "lucide-react";
+import { Link } from "react-router-dom";
 import BasicInfoSection from "../components/profile/BasicInfoSection";
 import OptionalInfoSection from "../components/profile/OptionalInfoSection";
 import PageHeader from "../components/common/PageHeader";
@@ -17,6 +18,12 @@ const UserProfilePage = () => (
 
     <BasicInfoSection />
     <OptionalInfoSection />
+
+    <Link className="profile-service-entry" to="/my/manner-temperature">
+      <ThermometerSun aria-hidden size={18} />
+      <div><strong>내 매너온도</strong><span>거래와 나눔으로 쌓인 신뢰도를 확인해요.</span></div>
+      <ArrowRight aria-hidden size={17} />
+    </Link>
 
     <button className="primary-button profile-submit" type="button">
       추천 시작하기

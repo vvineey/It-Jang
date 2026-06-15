@@ -8,6 +8,7 @@ import CommunityPage from "./pages/CommunityPage";
 import CirculationPage from "./pages/CirculationPage";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
+import MannerTemperaturePage from "./pages/MannerTemperaturePage";
 import OutfitCopyPage from "./pages/OutfitCopyPage";
 import RecommendationResultPage from "./pages/RecommendationResultPage";
 import RecommendationSelectPage from "./pages/RecommendationSelectPage";
@@ -24,6 +25,8 @@ const App = () => (
     <Route element={<AppShell />}>
       <Route path="/" element={<HomePage />} />
       <Route path="/profile" element={<UserProfilePage />} />
+      <Route path="/my/manner-temperature" element={<MannerTemperaturePage />} />
+      <Route path="/users/:userId/manner" element={<MannerTemperaturePage />} />
       <Route path="/closet" element={<ClosetPage />} />
       <Route path="/closet/register" element={<ClosetRegisterPage />} />
       <Route path="/closet/privacy" element={<ClosetPrivacyPage />} />
