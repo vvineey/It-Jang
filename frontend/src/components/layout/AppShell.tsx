@@ -4,12 +4,13 @@ import TopBar from "./TopBar";
 
 type AppShellProps = {
   showNav?: boolean;
+  showTopBar?: boolean;
 };
 
-const AppShell = ({ showNav = true }: AppShellProps) => (
+const AppShell = ({ showNav = true, showTopBar = true }: AppShellProps) => (
   <div className="app-shell">
     <div className="mobile-frame">
-      <TopBar />
+      {showTopBar ? <TopBar /> : null}
       <Outlet />
       {showNav ? <BottomNav /> : null}
     </div>

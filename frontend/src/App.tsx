@@ -16,7 +16,7 @@ const VirtualTryOnPage = lazy(() => import("./pages/VirtualTryOnPage"));
 
 const App = () => (
   <Routes>
-    <Route element={<AppShell showNav={false} />}>
+    <Route element={<AppShell showNav={false} showTopBar={false} />}>
       <Route path="/login" element={<LoginPage />} />
     </Route>
     <Route element={<AppShell />}>
