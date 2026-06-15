@@ -4,6 +4,7 @@ import AppShell from "./components/layout/AppShell";
 import ClosetPage from "./pages/ClosetPage";
 import ClosetPrivacyPage from "./pages/ClosetPrivacyPage";
 import ClosetRegisterPage from "./pages/ClosetRegisterPage";
+import ClothingCollectionPage from "./pages/ClothingCollectionPage";
 import CommunityPage from "./pages/CommunityPage";
 import CirculationPage from "./pages/CirculationPage";
 import HomePage from "./pages/HomePage";
@@ -30,6 +31,7 @@ const App = () => (
       <Route path="/closet" element={<ClosetPage />} />
       <Route path="/closet/register" element={<ClosetRegisterPage />} />
       <Route path="/closet/privacy" element={<ClosetPrivacyPage />} />
+      <Route path="/closet/collection-request" element={<ClothingCollectionPage />} />
       <Route path="/recommend" element={<RecommendationSelectPage />} />
       <Route path="/recommend/result" element={<RecommendationResultPage />} />
       <Route path="/price-compare" element={<PriceComparePage />} />

@@ -1,4 +1,4 @@
-import { Plus, ShieldCheck } from "lucide-react";
+import { Plus, Recycle, ShieldCheck } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import ClothingCard from "../components/closet/ClothingCard";
@@ -44,6 +44,10 @@ const ClosetPage = () => {
       <Link className="closet-service-entry" to="/closet/privacy">
         <ShieldCheck aria-hidden size={18} />
         <div><strong>옷장 공개 설정</strong><span>공개할 옷만 골라 안전하게 공유해요.</span></div>
+      </Link>
+      <Link className="closet-service-entry" to="/closet/collection-request">
+        <Recycle aria-hidden size={18} />
+        <div><strong>안 입는 옷 수거</strong><span>오래 입지 않은 옷을 필요한 곳으로 이어요.</span></div>
       </Link>
 
       <div className="category-tabs" role="tablist" aria-label="옷 카테고리">
