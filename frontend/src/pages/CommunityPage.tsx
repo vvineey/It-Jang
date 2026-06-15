@@ -1,4 +1,4 @@
-import { Bookmark, ChevronRight, Heart, PlusCircle } from "lucide-react";
+import { Bookmark, ChevronRight, Heart, PlusCircle, Shirt } from "lucide-react";
 import { Link } from "react-router-dom";
 import PageHeader from "../components/common/PageHeader";
 import { outfitPosts } from "../data/mockData";
@@ -44,7 +44,10 @@ const CommunityPage = () => (
         <article className="outfit-post-card" key={post.id}>
           <img alt={post.title} src={post.imageUrl} />
           <div>
-            <p>{post.author}</p>
+            <div className="outfit-post-meta">
+              <p>{post.author}</p>
+              <span>{post.visibility === "PUBLIC" ? "공개" : "친구공개"}</span>
+            </div>
             <h2>{post.title}</h2>
             <div className="outfit-tags">
               {post.tags.map((tag) => (
@@ -61,6 +64,10 @@ const CommunityPage = () => (
                 {post.saves}
               </span>
             </div>
+            <Link className="outfit-copy-link" to={`/outfits/${post.id}/copy`}>
+              <Shirt aria-hidden size={14} />
+              내 옷장으로 따라입기
+            </Link>
           </div>
         </article>
       ))}

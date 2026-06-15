@@ -40,6 +40,7 @@ export type OutfitPost = {
   author: string;
   imageUrl: string;
   tags: string[];
+  visibility: "PUBLIC" | "FRIENDS";
   likes: number;
   saves: number;
 };
