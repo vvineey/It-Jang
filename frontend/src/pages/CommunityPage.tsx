@@ -1,4 +1,4 @@
-import { Bookmark, ChevronRight, Heart, PlusCircle, Shirt } from "lucide-react";
+import { Bookmark, ChevronRight, Heart, PlusCircle, Shirt, Store } from "lucide-react";
 import { Link } from "react-router-dom";
 import PageHeader from "../components/common/PageHeader";
 import { outfitPosts } from "../data/mockData";
@@ -37,6 +37,13 @@ const CommunityPage = () => (
         <span>순환 옷장에서 필요한 사람에게 이어주세요.</span>
       </div>
       <ChevronRight aria-hidden size={18} />
+    </Link>
+    <Link className="circulation-entry-card" to="/community/flea-market">
+      <div>
+        <strong>순환 플리마켓 참가 모집 중</strong>
+        <span>입지 않는 옷을 직접 판매하거나 교환해요.</span>
+      </div>
+      <Store aria-hidden size={18} />
     </Link>
 
     <section className="outfit-post-grid" aria-label="코디 게시글">

@@ -2,14 +2,19 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import AppShell from "./components/layout/AppShell";
 import ClosetPage from "./pages/ClosetPage";
+import ClosetPrivacyPage from "./pages/ClosetPrivacyPage";
 import ClosetRegisterPage from "./pages/ClosetRegisterPage";
+import ClothingCollectionPage from "./pages/ClothingCollectionPage";
 import CommunityPage from "./pages/CommunityPage";
 import CirculationPage from "./pages/CirculationPage";
 import HomePage from "./pages/HomePage";
+import FleaMarketPage from "./pages/FleaMarketPage";
 import LoginPage from "./pages/LoginPage";
+import MannerTemperaturePage from "./pages/MannerTemperaturePage";
 import OutfitCopyPage from "./pages/OutfitCopyPage";
 import RecommendationResultPage from "./pages/RecommendationResultPage";
 import RecommendationSelectPage from "./pages/RecommendationSelectPage";
+import RewardsPage from "./pages/RewardsPage";
 import PriceComparePage from "./pages/PriceComparePage";
 import UserProfilePage from "./pages/UserProfilePage";
 
@@ -23,8 +28,13 @@ const App = () => (
     <Route element={<AppShell />}>
       <Route path="/" element={<HomePage />} />
       <Route path="/profile" element={<UserProfilePage />} />
+      <Route path="/my/manner-temperature" element={<MannerTemperaturePage />} />
+      <Route path="/my/rewards" element={<RewardsPage />} />
+      <Route path="/users/:userId/manner" element={<MannerTemperaturePage />} />
       <Route path="/closet" element={<ClosetPage />} />
       <Route path="/closet/register" element={<ClosetRegisterPage />} />
+      <Route path="/closet/privacy" element={<ClosetPrivacyPage />} />
+      <Route path="/closet/collection-request" element={<ClothingCollectionPage />} />
       <Route path="/recommend" element={<RecommendationSelectPage />} />
       <Route path="/recommend/result" element={<RecommendationResultPage />} />
       <Route path="/price-compare" element={<PriceComparePage />} />
@@ -43,6 +53,7 @@ const App = () => (
         }
       />
       <Route path="/community" element={<CommunityPage />} />
+      <Route path="/community/flea-market" element={<FleaMarketPage />} />
       <Route path="/outfits/:postId/copy" element={<OutfitCopyPage />} />
       <Route path="/circulation" element={<CirculationPage />} />
     </Route>

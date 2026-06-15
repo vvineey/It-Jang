@@ -32,7 +32,7 @@ export const outfitCopyItems: OutfitCopyItem[] = [
       name: "화이트 오버핏 셔츠",
       color: "화이트",
       imageUrl:
-        "https://images.unsplash.com/photo-1603252110485-7ba873bf42ab?auto=format&fit=crop&w=600&q=80",
+        "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=600&q=80",
     },
     matchStatus: "closet",
     replacement: {
@@ -116,4 +116,3 @@ export const getOutfitCopyPost = (postId?: string) => {
 
 export const copyPolicyNotice =
   "작성자의 얼굴, 체형, 비공개 옷장 정보는 사용하지 않고 내 아바타와 내 옷장만 활용해요.";
-

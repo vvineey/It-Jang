@@ -1,5 +1,6 @@
-import { MapPin, PlusCircle, Search, SlidersHorizontal } from "lucide-react";
+import { MapPin, PlusCircle, Search, SlidersHorizontal, ThermometerSun } from "lucide-react";
 import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import PageHeader from "../components/common/PageHeader";
 import { categoryTabs, communityPosts } from "../data/mockData";
 import type { ClothingCategory } from "../types";
@@ -80,6 +81,10 @@ const CirculationPage = () => {
                   <span key={tag}>#{tag}</span>
                 ))}
               </div>
+              <Link className="trade-manner-link" to={`/users/${post.id}/manner`}>
+                <ThermometerSun aria-hidden size={13} />
+                판매자 매너온도 보기
+              </Link>
             </div>
           </article>
         ))}
