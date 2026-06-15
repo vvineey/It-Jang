@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import AppShell from "./components/layout/AppShell";
 import ClosetPage from "./pages/ClosetPage";
+import ClosetPrivacyPage from "./pages/ClosetPrivacyPage";
 import ClosetRegisterPage from "./pages/ClosetRegisterPage";
 import CommunityPage from "./pages/CommunityPage";
 import CirculationPage from "./pages/CirculationPage";
@@ -25,6 +26,7 @@ const App = () => (
       <Route path="/profile" element={<UserProfilePage />} />
       <Route path="/closet" element={<ClosetPage />} />
       <Route path="/closet/register" element={<ClosetRegisterPage />} />
+      <Route path="/closet/privacy" element={<ClosetPrivacyPage />} />
       <Route path="/recommend" element={<RecommendationSelectPage />} />
       <Route path="/recommend/result" element={<RecommendationResultPage />} />
       <Route path="/price-compare" element={<PriceComparePage />} />
