@@ -30,7 +30,7 @@ const RecommendationSelectPage = () => {
         <label className="prompt-box">
           <span>원하는 코디를 자유롭게 입력해보세요!</span>
           <textarea placeholder="데이트를 할 건데 너무 꾸민 느낌은 싫어요. 심플한 스타일로 코디를 추천해주세요." rows={4} />
-        </label>햣
+        </label>
         <Link className="primary-button prompt-submit" to="/recommend/result">
           코디 추천받기
           <Send aria-hidden size={18} />
