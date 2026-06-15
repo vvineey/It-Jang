@@ -1,4 +1,4 @@
-import { ArrowRight, ShieldCheck, ThermometerSun } from "lucide-react";
+import { ArrowRight, Gift, ShieldCheck, ThermometerSun } from "lucide-react";
 import { Link } from "react-router-dom";
 import BasicInfoSection from "../components/profile/BasicInfoSection";
 import OptionalInfoSection from "../components/profile/OptionalInfoSection";
@@ -22,6 +22,11 @@ const UserProfilePage = () => (
     <Link className="profile-service-entry" to="/my/manner-temperature">
       <ThermometerSun aria-hidden size={18} />
       <div><strong>내 매너온도</strong><span>거래와 나눔으로 쌓인 신뢰도를 확인해요.</span></div>
+      <ArrowRight aria-hidden size={17} />
+    </Link>
+    <Link className="profile-service-entry" to="/my/rewards">
+      <Gift aria-hidden size={18} />
+      <div><strong>순환 리워드</strong><span>옷을 잘 순환한 기록과 포인트를 확인해요.</span></div>
       <ArrowRight aria-hidden size={17} />
     </Link>
 

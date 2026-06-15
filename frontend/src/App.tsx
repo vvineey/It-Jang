@@ -14,6 +14,7 @@ import MannerTemperaturePage from "./pages/MannerTemperaturePage";
 import OutfitCopyPage from "./pages/OutfitCopyPage";
 import RecommendationResultPage from "./pages/RecommendationResultPage";
 import RecommendationSelectPage from "./pages/RecommendationSelectPage";
+import RewardsPage from "./pages/RewardsPage";
 import PriceComparePage from "./pages/PriceComparePage";
 import UserProfilePage from "./pages/UserProfilePage";
 
@@ -28,6 +29,7 @@ const App = () => (
       <Route path="/" element={<HomePage />} />
       <Route path="/profile" element={<UserProfilePage />} />
       <Route path="/my/manner-temperature" element={<MannerTemperaturePage />} />
+      <Route path="/my/rewards" element={<RewardsPage />} />
       <Route path="/users/:userId/manner" element={<MannerTemperaturePage />} />
       <Route path="/closet" element={<ClosetPage />} />
       <Route path="/closet/register" element={<ClosetRegisterPage />} />
