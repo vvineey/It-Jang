@@ -1,21 +1,21 @@
 :root {
   --device-width: 393px;
   --device-height: 852px;
-  --forest: #214d37;
-  --forest-strong: #153725;
-  --moss: #5f7f53;
-  --mint: #dcebd2;
-  --paper: #f7f2e7;
-  --cotton: #fffaf0;
-  --wood: #8a5a3c;
-  --walnut: #4b2f22;
-  --clay: #b96f48;
-  --ink: #243127;
-  --muted: #758071;
-  --line: rgba(36, 49, 39, 0.13);
-  --shadow: 0 22px 56px rgba(33, 77, 55, 0.16);
+  --forest: #365f45;
+  --forest-strong: #244733;
+  --moss: #718b72;
+  --mint: #b9cdb8;
+  --paper: #e5ece5;
+  --cotton: #f4e7da;
+  --wood: #9b7e6b;
+  --walnut: #4d4037;
+  --clay: #c79d87;
+  --ink: #303b33;
+  --muted: #707970;
+  --line: rgba(47, 74, 55, 0.16);
+  --shadow: 0 24px 58px rgba(33, 54, 40, 0.22);
   color: var(--ink);
-  background: #ffffff;
+  background: #35483b;
   font-family:
     Inter, Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-synthesis: none;
@@ -61,6 +61,7 @@ a {
   justify-content: center;
   padding: 18px;
   overflow: hidden;
+  background: #ffffff;
 }
 
 .mobile-frame {
@@ -73,7 +74,7 @@ a {
   overflow: hidden;
   border: 1px solid rgba(33, 77, 55, 0.16);
   border-radius: 34px;
-  background: #ffffff;
+  background: #edf2ed;
   box-shadow: var(--shadow);
 }
 
@@ -87,7 +88,7 @@ a {
   justify-content: center;
   padding: 1px 20px;
   border-bottom: 1px solid rgba(33, 77, 55, 0.08);
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(229, 236, 229, 0.96);
   backdrop-filter: blur(18px);
 }
 
@@ -99,8 +100,8 @@ a {
 
 .top-bar__logo {
   display: block;
-  width: 62px;
-  height: 62px;
+  width: 52px;
+  height: 58px;
   object-fit: contain;
 }
 
@@ -279,7 +280,7 @@ a {
 }
 
 .login-logo {
-  width: min(66vw, 238px);
+  width: min(58vw, 214px);
   height: auto;
 }
 
@@ -3021,6 +3022,188 @@ a {
   color: var(--moss);
   font-size: 11px;
   font-weight: 900;
+}
+
+/* Growth-inspired vintage green theme */
+.screen,
+.login-screen,
+.home-screen,
+.tryon-screen,
+.price-screen {
+  background: #edf2ed;
+}
+
+.top-bar {
+  border-bottom-color: rgba(54, 95, 69, 0.13);
+  box-shadow: 0 8px 20px rgba(39, 67, 49, 0.06);
+}
+
+.bottom-nav {
+  border-color: rgba(54, 95, 69, 0.13);
+  background: rgba(244, 231, 218, 0.96);
+  box-shadow: 0 16px 34px rgba(39, 67, 49, 0.18);
+}
+
+.bottom-nav__item {
+  color: #778479;
+}
+
+.bottom-nav__item.is-active {
+  background: var(--forest);
+  color: #f8f2e9;
+}
+
+.panel,
+.today-outfit-card,
+.waiting-card,
+.weather-tip-card,
+.weekly-summary-card,
+.profile-section,
+.closet-summary div,
+.empty-panel,
+.recommend-prompt-card,
+.recommend-tag-section,
+.recommend-selection-summary,
+.result-summary-card,
+.result-reason-card,
+.result-category,
+.tryon-intro-card,
+.tryon-summary-card,
+.mannequin-preview,
+.tryon-outfit-section,
+.credit-notice-card,
+.price-search-card,
+.price-product-card,
+.price-filter-section,
+.lowest-price-card,
+.platform-offer-section,
+.price-history-card,
+.closet-match-section,
+.similar-product-section,
+.circulation-entry-card {
+  border-color: rgba(54, 95, 69, 0.12);
+  background: var(--paper);
+  box-shadow: 0 12px 28px rgba(49, 76, 57, 0.09);
+}
+
+.today-outfit-card,
+.lowest-price-card,
+.tryon-price-compare-card {
+  background: linear-gradient(145deg, #f2e3d6 0%, #dce8dd 100%);
+}
+
+.waiting-card,
+.credit-notice-card,
+.tryon-summary-card,
+.price-alert-modal {
+  background: #f4e7da;
+}
+
+.outfit-preview-item,
+.quick-actions a,
+.popular-outfit-card,
+.weekly-summary-grid div,
+.clothing-card,
+.selected-outfit-card,
+.outfit-post-card,
+.trade-card,
+.platform-offer-card,
+.face-photo-control,
+.avatar-style-controls > div {
+  border-color: rgba(54, 95, 69, 0.1);
+  background: #f8f3eb;
+  box-shadow: 0 9px 22px rgba(49, 76, 57, 0.08);
+}
+
+.home-alert-button,
+.icon-button,
+.tryon-back-button,
+.price-product-card__top button,
+.price-alert-modal header button {
+  background: #d7e3d7;
+  color: var(--forest);
+}
+
+.tag-pill,
+.category-tab,
+.community-filter-tabs button,
+.price-keyword-row button,
+.price-chip-row button,
+.secondary-button,
+.segmented-control,
+.price-alert-options button {
+  border-color: rgba(54, 95, 69, 0.17);
+  background: #f4e7da;
+  color: var(--forest);
+}
+
+.tag-pill.is-active,
+.category-tab.is-active,
+.community-filter-tabs button.is-active,
+.price-chip-row button.is-active,
+.price-alert-options button.is-active,
+.primary-button,
+.closet-add-button,
+.community-upload-button {
+  border-color: var(--forest);
+  background: var(--forest);
+  color: #f8f2e9;
+}
+
+.privacy-callout,
+.tryon-condition-grid div,
+.credit-summary-grid div,
+.trade-card__top span {
+  background: rgba(185, 205, 184, 0.62);
+}
+
+.field input,
+.field select,
+.field textarea,
+.community-search,
+.price-search-card label,
+.price-alert-input input {
+  border-color: rgba(54, 95, 69, 0.12);
+  background: #f8f3eb;
+}
+
+.login-screen {
+  background: #f4e7da;
+}
+
+.login-button--sns {
+  background: #b9cdb8;
+  color: var(--forest-strong);
+}
+
+.login-button--email {
+  background: var(--forest);
+  color: #f8f2e9;
+}
+
+.mannequin-preview {
+  background:
+    radial-gradient(circle at 50% 28%, rgba(185, 205, 184, 0.88), transparent 35%),
+    linear-gradient(180deg, #f4e7da 0%, #dce8dd 100%);
+}
+
+.tryon-preview-frame {
+  background:
+    radial-gradient(circle at 50% 38%, rgba(185, 205, 184, 0.74), transparent 45%),
+    #f8f3eb;
+}
+
+.source-badge,
+.home-badge-row span,
+.tryon-paid-row strong,
+.tryon-section-heading > strong,
+.price-section-heading strong {
+  background: #b9cdb8;
+  color: var(--forest-strong);
+}
+
+.price-alert-backdrop {
+  background: rgba(36, 71, 51, 0.32);
 }
 
 @media (max-width: 520px) {
