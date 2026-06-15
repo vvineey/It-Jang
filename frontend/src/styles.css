@@ -3151,6 +3151,9 @@ a {
 }
 
 .copy-original-card {
+  display: flex;
+  min-height: 370px;
+  flex-direction: column;
   overflow: hidden;
   border-radius: 22px;
   background: #f8f3eb;
@@ -3445,6 +3448,7 @@ a {
 }
 
 .copy-score-ring {
+  position: relative;
   display: grid;
   width: 62px;
   height: 62px;
