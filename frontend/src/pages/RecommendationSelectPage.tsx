@@ -22,15 +22,15 @@ const RecommendationSelectPage = () => {
   return (
     <main className="screen recommend-screen">
       <PageHeader
-        title="오늘은 어떤 분위기로 입을까요?"
+        title="오늘의 코디를 골라볼까요?"
         description="상황을 적거나 태그를 골라 추천받아보세요."
       />
 
       <section className="prompt-panel panel" aria-label="추천 프롬프트">
         <label className="prompt-box">
-          <span>어떤 옷을 입고 싶나요?</span>
-          <textarea placeholder="데이트에 어울리지만 너무 꾸민 느낌은 싫어요." rows={4} />
-        </label>
+          <span>원하는 코디를 자유롭게 입력해보세요!</span>
+          <textarea placeholder="데이트를 할 건데 너무 꾸민 느낌은 싫어요. 심플한 스타일로 코디를 추천해주세요." rows={4} />
+        </label>햣
         <Link className="primary-button prompt-submit" to="/recommend/result">
           코디 추천받기
           <Send aria-hidden size={18} />
