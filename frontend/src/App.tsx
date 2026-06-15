@@ -8,6 +8,7 @@ import ClothingCollectionPage from "./pages/ClothingCollectionPage";
 import CommunityPage from "./pages/CommunityPage";
 import CirculationPage from "./pages/CirculationPage";
 import HomePage from "./pages/HomePage";
+import FleaMarketPage from "./pages/FleaMarketPage";
 import LoginPage from "./pages/LoginPage";
 import MannerTemperaturePage from "./pages/MannerTemperaturePage";
 import OutfitCopyPage from "./pages/OutfitCopyPage";
@@ -50,6 +51,7 @@ const App = () => (
         }
       />
       <Route path="/community" element={<CommunityPage />} />
+      <Route path="/community/flea-market" element={<FleaMarketPage />} />
       <Route path="/outfits/:postId/copy" element={<OutfitCopyPage />} />
       <Route path="/circulation" element={<CirculationPage />} />
     </Route>
